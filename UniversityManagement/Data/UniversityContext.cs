@@ -13,7 +13,7 @@ namespace UniversityManagement.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=tcp:test-sylvanna.database.windows.net,1433;Initial Catalog=UniversityManagement;Persist Security Info=False;User ID=sylvanna-admin;Password=ivanyolo2004/;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer("Server=tcp:test-sylvanna.database.windows.net,1433;Initial Catalog=UniversityManagement;Persist Security Info=False;User ID=***;Password=***;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
