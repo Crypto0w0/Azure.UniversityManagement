@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Student>
+
+<h2>Студенти з курсами</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Студент</th>
+            <th>Курси</th>
+            <th>Оцінки</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FirstName @student.LastName</td>
+                <td>
+                    @foreach (var enrollment in student.Enrollments)
+                    {
+                        <div>@enrollment.Course.CourseName</div>
+                    }
+                </td>
+                <td>
+                    @foreach (var enrollment in student.Enrollments)
+                    {
+                        <div>@(enrollment.Grade?.ToString() ?? "Немає оцінки")</div>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

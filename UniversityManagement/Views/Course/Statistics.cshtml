@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CourseStatisticsViewModel>
+
+<h2>Статистика курсів</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Курс</th>
+            <th>Кількість студентів</th>
+            <th>Середня оцінка</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.CourseName</td>
+                <td>@course.StudentCount</td>
+                <td>@(course.AverageGrade?.ToString("0.00") ?? "Немає даних")</td>
+            </tr>
+        }
+    </tbody>
+</table>

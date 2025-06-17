@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Enrollment>
+
+<h2>Студенти з оцінкою вище 90</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Студент</th>
+            <th>Курс</th>
+            <th>Оцінка</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var enrollment in Model)
+        {
+            <tr>
+                <td>@enrollment.Student.FirstName @enrollment.Student.LastName</td>
+                <td>@enrollment.Course.CourseName</td>
+                <td>@enrollment.Grade</td>
+            </tr>
+        }
+    </tbody>
+</table>
